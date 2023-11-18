@@ -1,0 +1,6 @@
+Donald Knuth's definition of Algorithm:
+A definite, effective, and finite process that receives input and produces output based on this input.
+Definiteness = the steps are clear, consice, and unambiguous.
+Effectiveness = You can perform each operation precisely to solve the problem
+Finiteness = The algorithm stops after a finite number of steps.
+

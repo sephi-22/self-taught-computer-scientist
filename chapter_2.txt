@@ -1,0 +1,19 @@
+The three laws of Recursion:
+1) A recursive algorithm must have a base case
+2) A recursive algorithm must change its state and move towards the base case
+3) A recursive algorithm must call itself recursively
+
+Recursive algorithms often take up more memory because they have to hold data on Python's internal stack. 
+Recursive functions can also be more difficult than iterative algorithms to read and debug because it can be harder to follow what
+is happening.
+
+Vocabulary:
+iterative algorithm: An algorithm that solves problems by repeating steps over and over, typically using a loop.
+recursion: A method of solving a problem where the solution depends on solutions to smaller instances of the same problem
+base case: A condition that ends a recursive algorithm to stop it from continuing forever.
+factorial: The product of all positive integers less than or equal to a number.
+
+Challenge: 
+Print the numbers from 1 to 10 recursively.
+Answer:
+See chapter_2.py

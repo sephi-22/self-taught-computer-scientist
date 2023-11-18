@@ -1,0 +1,7 @@
+A linear search's time complexity is O(n). In the best case, when the element is the first element, it will take O(1), but in the
+worst-case, when the element we're searching for is the last element, it will be O(n). On average, it is n/2 steps, so O(n).
+
+You should consider using linear search when your data is not sorted. 
+In the real world, instead of writing your own linear search, you can use Python's built-in keyword 'in'
+Example: print(45 in unsorted_list)
+
