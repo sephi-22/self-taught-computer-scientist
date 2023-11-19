@@ -4,3 +4,10 @@ Definiteness = the steps are clear, consice, and unambiguous.
 Effectiveness = You can perform each operation precisely to solve the problem
 Finiteness = The algorithm stops after a finite number of steps.
 
+O(n) time follows the following order:
+1. Constant time
+2. Logarithmic time.
+3. Linear time
+4. Log linear time.
+5. Polynomial time
+6. Exponential time.
