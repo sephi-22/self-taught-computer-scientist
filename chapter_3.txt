@@ -5,3 +5,39 @@ You should consider using linear search when your data is not sorted.
 In the real world, instead of writing your own linear search, you can use Python's built-in keyword 'in'
 Example: print(45 in unsorted_list)
 
+Linear Search's time complexity is O(n). In the worst-case scenario, it will take n steps. Best case scenario is when the item is first in the list.
+On average, it takes n/2 steps, so the complexity is still O(n)
+
+You should consider linear search when data is not sorted. 
+
+Binary search only works when data is sorted. It searches for an element in a list by dividing it into halves. 
+Binary search takes O(logn) time. It is more efficient than a linear search because you don't have to search an entire list.
+
+Even if you have unsorted data, sometimes it is worth sorting it to take advantage of a binary search. For example, if you have a 
+large list and plan to do many searches, it might benefit you to sort your data once to vastly speed up each one of the searches you
+will do in the future.
+
+Python has a built-in module to perform a binary search, which you should use when writing real-world applications.
+The key to writing a binary search using Python's built-in tools is to use bisect_left from the bisect module, which finds the index
+or an existing element in a sorted list using a binary search.
+If the item you are looking for is not in your sorted iterable, bisect_left returns where it would be if it were there.
+
+This could make bisect left's result ambiguous, so we should write a function to use it properly.
+
+To understand how to search for characters, you need to understand more about how a computer stores them.
+A character set is a map between characters and binary numbers. Computer scientists use character encoding to implement different
+character sets. In ASCII, you computer maps each letter of the alphabet to a seven-bit number. Eg: A is 10000001 in binary and65 in 
+base 10. You can use Python's build-in ord() function to get a character's ASCII/Unicode value.
+
+Vocabulary:
+Search algorithm: An algorithm that looks for data in a data set
+Data set: A collection of data.
+Linear Search: A search algorithm that iterates through each element in a set of data and compares it to the target number
+Sorted Data: Data arranged in a meaningful way.
+Binary Search: Another algorithm for searching a list for a number, and it is faster than a linear search
+Floor division operator: An operator that returns the whole value of division, rounded down.
+Exponentiation: A mathematical operation you write as b^n (or b**n in python), where you multiply a number b times itself n times
+Base: the b in the equation
+Exponent: The n in the equation
+Logarithm: The power you must raise a number to in order to produce another number.
+Character Set: A map between characters and binary numbers.
