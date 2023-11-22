@@ -1,0 +1,86 @@
+WHen you are building your programs in the real world, you should almost always use your programming language's built-in 
+sorting function. You should not implement the classic sorting algorithms. However, learning algorithms helps you understand 
+time complexity and situations other than sorting, like the merge step in a merge sort.
+
+Bubble Sort:
+Bubble sort is when each element of the array is compared to its next element and then swapped if its larger. On each iteration, the 
+highest number bubbles to the top (end of the array). In the 2nd iteration, the next biggest element bubbles to the second to last element
+and so on.
+
+It uses two nested loops, so the complexity is O(n^2). It can be optimized by adding i to the second for loop so we don't have to compare
+with the elements that bubble to the end in each iteration. It can further be optimized to check if there were any swaps made, and if there
+aren't any swaps made, then the algorithm ends.
+
+When to use Bubble Sort:
+Bubble sort can also be written to sort strings. For example, you could modify a bubble sort to sort strings alphabetically by each 
+word's first letter.
+A bubble sort's main advantage is how simple it is to implement, making it a good starting point for teaching algorithms. It is not 
+efficient for larger data sets. It is also stable. A stable sort is one that does not disturb any sequences other that the one specified
+by the sort key. For example, for two words starting with A, like Akita and Albatross, a stable sort will keep the order, but an unstable
+sort might change it.
+
+In other words, in a stable sort, when there are two equal keys, the items maintain their original order. You are unlikely to see 
+bubble sort used in the real world.
+
+Insertion Sort:
+Insertion sort works from right half to the sorted left half of the list. We start from the 2nd element in the list and compare it to 
+left elements. If a number on the left is greater, we push it to the right till we find the right place for the current element.
+As this algorithm propogates, it keeps sorting the left side of the list and keeps pushing bigger element to the right.
+
+When to use Insertion Sort:
+Like a bubble sort, an insertion sort is stable. Also like a bubble sort, an insertion sort is O(n^2), so it is not very efficient.
+However, unlike a bubble sort, computer scientists use insertion sorts in real-world applications. For example, an insertion sort may
+be efficient choice if you have nearly sorted data. When a list is sorted or almsot sorted, an insertion sort's time complexity is O(n),
+which is very efficient.
+
+Merge Sort:
+A merge sort is a recursive sorting algorithm that continually splits a list in half until there are one or more lists containing one items
+and then puts them back together in the correct order. Here is how it works.
+First, you use recursion to continually break your list in half until your original list becomes one or more sublists containing only one 
+number. 
+
+Lists containing one item are sorted by definition. Once you have sorted lists containing one item each, you merge your sublists two at a time
+by comparing the first item in each list. Merging your lists means combining them in sorted order.
+
+When to use Merge Sort:
+A merge sort is an example of a divide and conquer algorithm. It is one that recursively breaks a problem into two or more related 
+subproblems ultil they are simple enough to solve easily. In a merge sort, you break down a list into sublists until each sublist has
+only one item, making it simple to solve beucase a list with one item is sorted by definition.
+
+Merge sort's run time is O(n*log n) because while splitting the initial list into sublists is logarithmic, the algorithm requires linear 
+time to handle each item in the sublists as it merges them. With loglinear time, merge sort is one of the most efficient sorting 
+algorithms and widely used by computer scientists. For example, Python uses merge sort in its built-in sorting algorithms.
+
+Like bubble sort and insertion sort, a merge sort is also stable.
+
+Sorting Algorithms in Python:
+Python has two built-in sort functions: Sorted and sort. They use Timsort, a hybrid sorting algorithm that combines merge sort and
+insertion sort (depending on the data) or switching between them throughout the algorithm. 
+
+Python's sorted function allows you to sort any iterable, as long as Python can compare the data in it. It has an optional parameter
+called reverse, so if you want to sort your iterable in descentding order, you can pass in reverse=True
+
+Sorted also has a parameter called key that lets you pass in a function. Python then calls that function on each item in your iterable and uses
+the result to sort it. For example, we can pass the len function and python will sort by length.
+
+Python's other function for sorting is sort, which has the same optional parameters as sorted, but unlike soreted, sort only works on lists.
+Also, unlike sorted, sort sorts in place: it changes the original list instead of returning a new one. 
+
+Vocabulary:
+sorting data: Arranging data in a meaningful way.
+bubble sort: A sorting algorithm where you iterate through a list of numbers, compare each number with the next number, and swap them
+if they are out of order.
+stable sort: A sort that does not disturb any sequences other than the one specified by the sort key.
+insertion sort: A sorting algorithm where you sort data like you sort a deck of cards
+merge sort: A recursive sorting algorithm that continually splits a list in half until there are one or more lists containing one item,
+and then puts them back together in the correct order.
+divide-and-conquer algorithm: An algorithm that recursively breaks a problem into two or more related subproblems until they are simple
+enough to solve easily.
+hybrid sorting algorithm: An algorithm that combines two or more other algorithms that sovle the same problem, either choosing one 
+(depending on the data) or switching between them throughout the algorithm.
+
+Challenge:
+Research and write a sorting algorithm that is not a bubble sort, insertion sort, or merge sort.
+Ans: Quicksort, check chapter_4.py
+
+Quicksort is also a divide-and-conquer recursive algorithm
